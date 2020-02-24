@@ -82,6 +82,7 @@
     <Compile Include="TMP\TMP.02.01.FrozenSection.cs" />
     <Compile Include="TMP\TMP.01.01.CalloutDimension.cs" />
     <Compile Include="TMP\Support.cs" />
+    <Compile Include="TVD\Class1.cs" />
     <Compile Include="TVD\TVD.05.04.Interference Report.cs">
       <SubType>Form</SubType>
     </Compile>
