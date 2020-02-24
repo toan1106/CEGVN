@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+      None
+    </ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14DBB9FF-ED65-411F-812C-688E27E7D587}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CEGVN</RootNamespace>
+    <AssemblyName>CEGVN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramW6432)\Autodesk\Revit 2018\Revit.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramW6432)\Autodesk\Revit 2018\Revit.exe</StartProgram>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\Revit 2018.2 SDK\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2019\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2019\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TMP\TMP.03.02.FormSelectElements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMP\TMP.03.02.FormSelectElements.Designer.cs">
+      <DependentUpon>TMP.03.02.FormSelectElements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMP\TMP.03.01.SelectElement.cs" />
+    <Compile Include="TMP\TMP.02.02.Form_FrozenSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMP\TMP.02.02.Form_FrozenSection.Designer.cs">
+      <DependentUpon>TMP.02.02.Form_FrozenSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMP\TMP.02.01.FrozenSection.cs" />
+    <Compile Include="TMP\TMP.01.01.CalloutDimension.cs" />
+    <Compile Include="TMP\Support.cs" />
+    <Compile Include="TVD\TVD.05.04.Interference Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TVD\TVD.05.04.Interference Report.designer.cs">
+      <DependentUpon>TVD.05.04.Interference Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVD\TVD.05.03.FrmCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TVD\TVD.05.03.FrmCheck.designer.cs">
+      <DependentUpon>TVD.05.03.FrmCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVD\TVD.05.01.CheckIntersect.cs" />
+    <Compile Include="TVD\TVD.05.02.Intersect_Report_Event.cs" />
+    <Compile Include="TVD\TVD.05.05.lbr_.cs" />
+    <Compile Include="TVD\TVD.01.01.CheckWorkPlanecmd.cs" />
+    <Compile Include="TVD\TVD.01.02.CheckWorkPlaneEvent.cs" />
+    <Compile Include="TVD\TVD.01.03.FrmShowRefernceplane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TVD\TVD.01.03.FrmShowRefernceplane.designer.cs">
+      <DependentUpon>TVD.01.03.FrmShowRefernceplane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVD\TVD.01.04.FrmCheckReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TVD\TVD.01.04.FrmCheckReference.designer.cs">
+      <DependentUpon>TVD.01.04.FrmCheckReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVD\TVD.02.02.lbr_view.cs" />
+    <Compile Include="TVD\TVD.03.03.Selectionceg.cs" />
+    <Compile Include="TVD\TVD.04.01.PlaceSymbolongravityofface.cs" />
+    <Compile Include="TVD\TVD.04.02.FrmPlaceSymbolonGravity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TVD\TVD.04.02.FrmPlaceSymbolonGravity.Designer.cs">
+      <DependentUpon>TVD.04.02.FrmPlaceSymbolonGravity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVD\TVD.06.01.FindGavitycmd.cs" />
+    <Compile Include="TVD\TVD.07.03.FrmCutVoidConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TVD\TVD.07.03.FrmCutVoidConnection.designer.cs">
+      <DependentUpon>TVD.07.03.FrmCutVoidConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVD\TVD.07.01.CutVoidConnectioncmd.cs" />
+    <Compile Include="TVD\TVD.07.02.CutVoidConnection.cs" />
+    <Compile Include="TVD\TVD.EventRegisterHandler.cs" />
+    <Compile Include="TVD\TVD.ProgressBarform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TVD\TVD.ProgressBarform.designer.cs">
+      <DependentUpon>TVD.ProgressBarform.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TMP\TMP.03.02.FormSelectElements.resx">
+      <DependentUpon>TMP.03.02.FormSelectElements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMP\TMP.02.02.Form_FrozenSection.resx">
+      <DependentUpon>TMP.02.02.Form_FrozenSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVD\TVD.05.04.Interference Report.resx">
+      <DependentUpon>TVD.05.04.Interference Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVD\TVD.05.03.FrmCheck.resx">
+      <DependentUpon>TVD.05.03.FrmCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVD\TVD.01.03.FrmShowRefernceplane.resx">
+      <DependentUpon>TVD.01.03.FrmShowRefernceplane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVD\TVD.01.04.FrmCheckReference.resx">
+      <DependentUpon>TVD.01.04.FrmCheckReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVD\TVD.04.02.FrmPlaceSymbolonGravity.resx">
+      <DependentUpon>TVD.04.02.FrmPlaceSymbolonGravity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVD\TVD.07.03.FrmCutVoidConnection.resx">
+      <DependentUpon>TVD.07.03.FrmCutVoidConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVD\TVD.ProgressBarform.resx">
+      <DependentUpon>TVD.ProgressBarform.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterClean">
+    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2018\CEGVN.addin" />
+    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2018\CEGVN.dll" />
+  </Target>
+</Project>
